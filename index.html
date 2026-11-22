@@ -573,7 +573,7 @@ async function viewLink(){const m=location.hash.match(/^#t=([zp])([\w-]+)$/);if(
 const lkNorm=v=>v.toUpperCase().replace(/[^A-Z0-9]/g,"");
 const sha=s=>crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(h=>[...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("").slice(0,24));
 function lkMsg(t){const e=$("#lkm");if(e)e.textContent=t}
-const lkWa=()=>"https://wa.me/"+"https://t.me/YerzhanOmiruzakBot"+"?text="+encodeURIComponent("Сәлеметсіз бе! KASIP.KZ сайтына тапсырыс бергім келеді.\nСайт: "+S.name+"\nҚала: "+(S.city||"-")+(giftPick()?"\nЖеңілдік: «"+giftPick()+"»":"")+"\nСайт сілтемесіне арналған кодты жіберіңіз.");
+const lkWa=()=>"https://t.me/YerzhanOmiruzakBot"+"?text="+encodeURIComponent("Сәлеметсіз бе! KASIP.KZ сайтына тапсырыс бергім келеді.\nСайт: "+S.name+"\nҚала: "+(S.city||"-")+(giftPick()?"\nЖеңілдік: «"+giftPick()+"»":"")+"\nСайт сілтемесіне арналған кодты жіберіңіз.");
 function lkGen(){mkLink(S).then(l=>{const i=$("#lkv");if(i)i.value=l})}
 const ulList=()=>{try{return JSON.parse(localStorage.getItem("kasip_ul")||"[]")}catch(_){return[]}};
 function lkRender(){const b=$("#lk");if(!b)return;const dl=$("[data-dl]");
